@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "legacy-dev-after-group-dev"
+version = "0.1.0"
+description = "OXDEV-109396 autofix testbed: legacy dev-dependencies after a group.dev table"
+authors = ["OX Security <research@ox.security>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+requests = "^2.31"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.8"
+
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^4.1.0"
+ruff = "^0.9.6"
+pytest = "^9.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

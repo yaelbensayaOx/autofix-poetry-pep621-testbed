@@ -1,0 +1,20 @@
+[project]
+name = "poetry2-pep621-app"
+version = "0.1.0"
+description = "OXDEV-109396 autofix testbed: Poetry 2 project, dependencies in PEP 621 [project]"
+authors = [{name = "OX Security"}]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "slack-bolt (>=1.25.0,<2.0.0)",
+    "fastapi (>=0.116.1,<0.117.0)",
+    "uvicorn (>=0.35.0,<0.36.0)",
+    "aiohttp (>=3.12.15,<4.0.0)",
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

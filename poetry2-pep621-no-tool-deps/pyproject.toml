@@ -1,0 +1,25 @@
+[project]
+name = "poetry2-pep621-no-tool-deps"
+version = "0.1.0"
+description = "OXDEV-109396 autofix testbed: PEP 621 dependencies, [tool.poetry] without a dependencies table"
+authors = [{name = "OX Security"}]
+readme = "README.md"
+license = {text = "Proprietary"}
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+    "boto3>=1.38.28",
+    "requests>=2.32.3",
+    "strands-agents>=1.9.0",
+    "strands-agents-tools>=0.2.8",
+    "mcp>=1.15.0",
+    "pydantic>=2.11.0",
+    "pydantic-settings>=2.5.2",
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
